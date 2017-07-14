@@ -34,7 +34,7 @@ A first ruleset for the Quickstart
     pre {
 	mileage = event:attr("mileage")
     }
-    if(mileage > long_trip){
+    if(mileage > long_trip) then {
 	noop()
 	fired{
 	  log debug "found_long_trip: "+ mileage
