@@ -35,8 +35,8 @@ A first ruleset for the Quickstart
 	mileage = event:attr("mileage")
     }
     if(mileage > long_trip){
-	send_directive("long_trip_mileage",{"length":mileage})
-	fired {
+	noop()
+	fired{
 	  log debug "found_long_trip: "+ mileage
 	  raise explicit event "found_long_trip"
 	}
