@@ -16,9 +16,17 @@ A first ruleset for the Quickstart
     }
   }
   
-  rule hello_world {
+  rule hello {
     select when echo hello
     send_directive("say", {"something": "Hello World"})
+  }
+
+  rule message {
+    select when echo message
+    pre {
+	input = event::attr("input")
+    }
+    send_directive("say", {"something":input})	
   }
   
 }
