@@ -55,7 +55,7 @@ A first ruleset for the Quickstart
 	empty = []
     }
     always {
-	ent:tripArray := empty
+	ent:tripArray := empty;
 	ent:longTripArray := empty
     }
   }
