@@ -52,8 +52,8 @@ A first ruleset for the Quickstart
   rule clear_trips {
     select when car trip_reset
     always {
-	ent:tripArray := ent:tripArray.clear()
-	ent:longTripArray := ent:longTripArray.clear()
+	ent:tripArray := []
+	ent:longTripArray := []
     }
   }
 }
